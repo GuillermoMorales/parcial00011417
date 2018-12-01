@@ -1,5 +1,24 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+ html
+     head
+         title= title
+         script(src="/javascripts/jquery-1.9.1.js")
+         link(rel='stylesheet' type='text/css' href='/stylesheets/materialize.min.css')
+         script(src="/javascripts/materialize.min.js")
+     body
+         nav
+            div(class="nav-wrapper black") 
+               a.brand-logo(href='') KeyBIOMETRIC
+               ul#nav-mobile.right.hide-on-med-and-down
+                 li
+                   a(href='')
+                     i.material-icons.left playlist_add
+                     | ingresar
+                 li
+                   a(href='')
+                     i.material-icons.left description
+                     | registrar
+                 li
+                   a(href='')
+                     i.material-icons.left supervisor_account
+                     | informacion
