@@ -2,25 +2,94 @@ doctype html
 html
     head
         title='Administración de libros'
-        
-        link(rel='stylesheet', type='text/css' ,href='../public/stylesheets/style.css')
-        link(rel='stylesheet' ,type='text/css', href='../public/stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', type='text/css' ,href='stylesheets/style.css')
+        link(rel='stylesheet' ,type='text/css', href='stylesheets/bootstrap.min.css')
         link(rel='stylesheet' ,href='https://use.fontawesome.com/releases/v5.5.0/css/all.css', integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU', crossorigin='anonymous')
-        script(src='../public/javascripts/bootstrap.min.js')
+        link(href='https://fonts.googleapis.com/css?family=Oswald' ,rel='stylesheet')
+        
     body
-        nav
-          div(class="nav-wrapper black") 
-              a.brand-logo(href='') KeyBIOMETRIC
-              ul#nav-mobile.right.hide-on-med-and-down
-                li
-                  a(href='')
-                    i.material-icons.left playlist_add
-                    | ingresar
-                li
-                  a(href='')
-                    i.material-icons.left description
-                    | registrar
-                li
-                  a(href='')
-                    i.material-icons.left supervisor_account
-                    | informacion
+      block content  
+        .container
+          #contenedor1.row
+            .col-2
+              i.fas.fa-book.libro
+            .col-10
+              h1.titulo
+                | Administrador de Libros
+          .row.contenedor2
+            .col-3
+              input#color.form-control(type='text',placeholder='Nombre')
+            .col-3
+              input#color.form-control(type='text',placeholder='Genero')
+            .col-3
+              input#color.form-control(type='text',placeholder='# de paginas')
+            .col-3  
+              button.btn.btn-success.guardar(type='button') Guardar
+          table.table.table-bordered.table.striped
+            thead
+              tr
+                th(scope='col') IdLibro
+                th(scope='col') Nombre
+                th(scope='col') Genero
+                th(scope='col') #Paginas
+                th(scope='col') Opciones
+            tbody
+              tr
+                th(scope='row') 1
+                td Harry Potter
+                td Fantasia
+                td 3333
+                td
+                  .row
+                    .col-4
+                      button.btn.btn-warning
+                        i.far.fa-edit
+                    .col-4
+                      button.btn-danger.btn
+                        i.fas.fa-trash-alt.icono
+              tr
+                th(scope='row') 2
+                td Star Wars
+                td Ciencia Ficcion
+                td 4852
+                td
+                  .row
+                    .col-4
+                      button.btn.btn-warning
+                        i.far.fa-edit
+                    .col-4
+                      button.btn-danger.btn
+                        i.fas.fa-trash-alt.icono
+              tr
+                th(scope='row') 2
+                td Star Wars
+                td Ciencia Ficcion
+                td 4852
+                td
+                  .row
+                    .col-4
+                      button.btn.btn-warning
+                        i.far.fa-edit
+                    .col-4
+                      button.btn-danger.btn
+                        i.fas.fa-trash-alt.icono
+              tr
+                th(scope='row') 3
+                td Mickey Mouse
+                td Animacion
+                td 4857
+                td
+                  .row
+                    .col-4
+                      button.btn.btn-warning
+                        i.far.fa-edit
+                    .col-4
+                      button.btn-danger.btn
+                        i.fas.fa-trash-alt.icono
+
+script(src='javascripts/bootstrap.min.js')
+script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo',crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49'
+        crossorigin='anonymous')
+
+            

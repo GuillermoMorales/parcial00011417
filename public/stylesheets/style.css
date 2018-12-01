@@ -1,10 +1,14 @@
-.contenedor1
+#contenedor1
 {
     background-color: #ffe9c4;
 }
 .titulo
 {
     font-family: 'Oswald', sans-serif;
+}
+.azuls
+{
+    background-color: black;
 }
 .libro
 {
@@ -13,9 +17,11 @@
     margin-bottom: 0.2em;
     margin-left: 1em;
 }
-.color
+#color
 {
     border-color: lightskyblue;
+    margin-top: 4em;
+    margin-left: 3em;
 }
 input,.guardar
 {
